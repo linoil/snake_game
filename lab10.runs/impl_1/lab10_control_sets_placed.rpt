@@ -1,0 +1,98 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Fri Dec 30 10:51:49 2022
+| Host         : DESKTOP-61TUIR7 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file lab10_control_sets_placed.rpt
+| Design       : lab10
+| Device       : xc7a35ti
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    20 |
+|    Minimum number of control sets                        |    20 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    79 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    20 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     4 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     2 |
+| >= 12 to < 14      |     2 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    10 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              73 |           55 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             261 |           99 |
+| Yes          | No                    | No                     |             250 |          147 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             225 |          102 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------+----------------------------+----------------------------+------------------+----------------+--------------+
+|    Clock Signal   |        Enable Signal       |      Set/Reset Signal      | Slice Load Count | Bel Load Count | Bels / Slice |
++-------------------+----------------------------+----------------------------+------------------+----------------+--------------+
+|  clk_divider0/CLK |                            |                            |                1 |              1 |         1.00 |
+|  clk_divider0/CLK |                            | vs0/reset0                 |                2 |              2 |         1.00 |
+|  clk_IBUF_BUFG    | pos_x[0][9]_i_1_n_0        | snake_clk[0]_i_1_n_0       |                3 |              5 |         1.67 |
+|  clk_IBUF_BUFG    | pos_y[0][9]_i_1_n_0        | snake_clk[0]_i_1_n_0       |                4 |              5 |         1.25 |
+|  clk_IBUF_BUFG    | score[4]_i_1_n_0           |                            |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG    | snake_length               | snake_clk[0]_i_1_n_0       |                2 |              5 |         2.50 |
+|  clk_divider0/CLK | vs0/v_count_reg[9]_i_2_n_0 | vs0/v_count_reg[9]_i_1_n_0 |                4 |             10 |         2.50 |
+|  clk_divider0/CLK | vs0/pixel_tick             | vs0/h_count_reg[9]_i_1_n_0 |                6 |             10 |         1.67 |
+|  vs0/E[0]         |                            |                            |                9 |             12 |         1.33 |
+|  clk_IBUF_BUFG    | vs0/pixel_tick             |                            |                8 |             12 |         1.50 |
+|  clk_IBUF_BUFG    |                            | snake_clk[0]_i_1_n_0       |               10 |             17 |         1.70 |
+|  clk_IBUF_BUFG    |                            | db0/clear                  |                6 |             22 |         3.67 |
+|  clk_IBUF_BUFG    |                            | db1/clear                  |                6 |             22 |         3.67 |
+|  clk_IBUF_BUFG    |                            | db2/clear                  |                6 |             22 |         3.67 |
+|  clk_IBUF_BUFG    |                            | db3/clear                  |                6 |             22 |         3.67 |
+|  clk_IBUF_BUFG    |                            | snake_clk[63]              |               16 |             63 |         3.94 |
+|  clk_IBUF_BUFG    |                            | vs0/reset0                 |               47 |             91 |         1.94 |
+|  clk_IBUF_BUFG    | pos_y[1][9]_i_1_n_0        | snake_clk[0]_i_1_n_0       |               83 |            190 |         2.29 |
+|  clk_IBUF_BUFG    | vs0/score_reg[0]           |                            |              137 |            233 |         1.70 |
+|  clk_IBUF_BUFG    |                            |                            |             1341 |           5256 |         3.92 |
++-------------------+----------------------------+----------------------------+------------------+----------------+--------------+
+
+

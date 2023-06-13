@@ -1,0 +1,40 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Thu Dec 29 23:19:28 2022
+# Process ID: 11580
+# Current directory: C:/Users/nini/Desktop/lab10/lab10
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21572 C:\Users\nini\Desktop\lab10\lab10\lab10.xpr
+# Log file: C:/Users/nini/Desktop/lab10/lab10/vivado.log
+# Journal file: C:/Users/nini/Desktop/lab10/lab10\vivado.jou
+# Running On: LAPTOP-1D9DF9QI, OS: Windows, CPU Frequency: 3110 MHz, CPU Physical cores: 4, Host memory: 16856 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/nini/Desktop/lab10/lab10/lab10.xpr
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/nini/Desktop/lab10/lab10/lab10.srcs/sources_1/imports/Downloads/background.mem] -no_script -reset -force -quiet
+remove_files  C:/Users/nini/Desktop/lab10/lab10/lab10.srcs/sources_1/imports/Downloads/background.mem
+export_ip_user_files -of_objects  [get_files C:/Users/nini/Desktop/lab10/lab10/lab10.srcs/sources_1/imports/Downloads/fish3.mem] -no_script -reset -force -quiet
+remove_files  C:/Users/nini/Desktop/lab10/lab10/lab10.srcs/sources_1/imports/Downloads/fish3.mem
+export_ip_user_files -of_objects  [get_files C:/Users/nini/Desktop/lab10/lab10/lab10.srcs/sources_1/imports/Downloads/fish1.mem] -no_script -reset -force -quiet
+remove_files  C:/Users/nini/Desktop/lab10/lab10/lab10.srcs/sources_1/imports/Downloads/fish1.mem
+export_ip_user_files -of_objects  [get_files C:/Users/nini/Desktop/lab10/lab10/lab10.srcs/sources_1/imports/Downloads/fish2.mem] -no_script -reset -force -quiet
+remove_files  C:/Users/nini/Desktop/lab10/lab10/lab10.srcs/sources_1/imports/Downloads/fish2.mem
+export_ip_user_files -of_objects  [get_files C:/Users/nini/Desktop/lab10/lab10/lab10.srcs/sources_1/images.mem] -no_script -reset -force -quiet
+remove_files  C:/Users/nini/Desktop/lab10/lab10/lab10.srcs/sources_1/images.mem
+add_files -norecurse C:/Users/nini/Desktop/DCL_final/background.mem
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/nini/Desktop/lab10/lab10/lab10.runs/impl_1/lab10.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/nini/Desktop/lab10/lab10/lab10.runs/impl_1/lab10.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
